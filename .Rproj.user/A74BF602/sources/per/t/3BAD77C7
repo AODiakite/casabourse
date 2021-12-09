@@ -1,0 +1,26 @@
+{
+    "id": "3BAD77C7",
+    "path": "~/casabourse/R/casabourse.R",
+    "project_path": "R/casabourse.R",
+    "type": "r_source",
+    "hash": "1678640200",
+    "contents": "",
+    "dirty": false,
+    "created": 1639055208224.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "135,1",
+        "scrollLine": "117"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1639035359,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1639035359,
+    "read_only": false,
+    "read_only_alternatives": []
+}

@@ -1,0 +1,28 @@
+{
+    "id": "1C02C573",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1639058646919.0,
+    "source_on_save": false,
+    "relative_order": 10,
+    "properties": {
+        "id": "81cc8dcbc9b644b5a6bcba58a54fa6d2",
+        "name": "df0[[1]][[1]]",
+        "title": "df0[[1]][[1]]",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 0,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1639058646919,
+    "read_only": false,
+    "read_only_alternatives": []
+}

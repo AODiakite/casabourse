@@ -1,0 +1,28 @@
+{
+    "id": "CBDF6DA3",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1639059314148.0,
+    "source_on_save": false,
+    "relative_order": 14,
+    "properties": {
+        "id": "45985762ce04472e87f2a2d631e6b238",
+        "name": "data",
+        "title": "data",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 4393492406,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1639059314148,
+    "read_only": false,
+    "read_only_alternatives": []
+}

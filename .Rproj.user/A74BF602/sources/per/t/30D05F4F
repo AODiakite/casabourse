@@ -1,0 +1,28 @@
+{
+    "id": "30D05F4F",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1639056676877.0,
+    "source_on_save": false,
+    "relative_order": 6,
+    "properties": {
+        "id": "e18619027bc24436bdf64cf936fcb498",
+        "name": "df0$result",
+        "title": "df0$result",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 140512875066592,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1639056676877,
+    "read_only": false,
+    "read_only_alternatives": []
+}

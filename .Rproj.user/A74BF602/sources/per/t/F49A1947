@@ -1,0 +1,26 @@
+{
+    "id": "F49A1947",
+    "path": "~/casabourse/R/pythonFile.R",
+    "project_path": "R/pythonFile.R",
+    "type": "r_source",
+    "hash": "3145275601",
+    "contents": "",
+    "dirty": false,
+    "created": 1639054544171.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "354,2",
+        "scrollLine": "344"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1639073118,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1639073118302,
+    "read_only": false,
+    "read_only_alternatives": []
+}

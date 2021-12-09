@@ -1,0 +1,49 @@
+#' Install python-Casabourselib
+#'
+#' Install the python library used as the backbone of this package. You can
+#' pass arguments on to [reticulate::py_install()], but `python-Casabourselib` needs
+#' `python_version = "3.9"` and `pip = TRUE`.
+#'
+#' @param method Installation method (by default, "auto" automatically finds a
+#' method that will work in the local environment, but note that the
+#' "virtualenv" method is not available on Windows)
+#' @param conda Path to conda executable (or "auto" to find conda using the PATH
+#' and other conventional install locations)
+#' @param envname Name of Python environment to install within
+#' @param conda_python_version the python version installed in the created conda
+#' environment (Python 3.9 is installed by default)
+#' @param ... other arguments passed to [reticulate::conda_install()] or
+#' [reticulate::virtualenv_install()]
+#'
+#' @return `TRUE` if installation is successful
+#' @export
+install_Casabourse <- function(method = c("auto", "virtualenv", "conda"),
+                          conda = "auto", envname = NULL,
+                          conda_python_version = "3.9", ...) {
+
+  # Install
+  method <- match.arg(method)
+  reticulate::py_install(
+    packages = "Casabourselib",  envname = envname, method = method, conda = conda,
+    python_version = conda_python_version, pip = TRUE, ...)
+  method <- match.arg(method)
+  reticulate::py_install(
+    packages = "ipywidgets",  envname = envname, method = method, conda = conda,
+    python_version = conda_python_version, pip = TRUE, ...)
+
+  invisible(TRUE)
+}
+
+# Environment for globals
+#' Ebvironnement
+#' @return emptyenvironnement
+#' @export
+casa_env <- new.env(parent = emptyenv())
+
+# Load python-Casabourselib
+.onLoad <- function(libname, pkgname) {
+  reticulate::configure_environment(pkgname)
+
+  assign("Casabourselib", reticulate::import("Casabourselib", delay_load = TRUE), casa_env)
+  assign("ipywidgets", reticulate::import("ipywidgets", delay_load = TRUE), casa_env)
+  }

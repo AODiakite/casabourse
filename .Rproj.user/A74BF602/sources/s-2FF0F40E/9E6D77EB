@@ -1,0 +1,27 @@
+{
+    "id": "9E6D77EB",
+    "path": "~/casabourse/R/pythonFile.R",
+    "project_path": "R/pythonFile.R",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1639033015000.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "385,1",
+        "scrollLine": "355"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1639073118,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1639073118,
+    "read_only": false,
+    "read_only_alternatives": []
+}
