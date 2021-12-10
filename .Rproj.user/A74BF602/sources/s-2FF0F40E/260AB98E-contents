@@ -1,6 +1,0 @@
-usethis::use_build_ignore('devtools_history.R')
-usethis::use_package('Matrix')
-usethis::use_package('reticulate')
-usethis::use_package('stringr')
-usethis::use_package('readr')
-usethis::use_package('usethis')

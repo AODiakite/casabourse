@@ -284,6 +284,7 @@ madex.data=function(){
   df=t(df)
   colnames(df)=columns
   df=data.frame(df)
+
   return(df)
 }
 
@@ -381,6 +382,7 @@ daily.data=function(ticker,from,to){
   df=data.frame(Date,Value,Min,Max,Variation,Volume)
   rownames(df)=df$Date
   df=df[,-1]
+  row.names(df)=Date=as.Date(rownames(df),'%d/%m/%Y')
   return(df)
 
 }
