@@ -1,7 +1,7 @@
 
 library(reticulate)
 reticulate::py_install("bs4")
-reticulate::py_install("json")
+
 #' Mdex Data
 #'
 #' @return a data.frame
