@@ -357,7 +357,7 @@ daily.data=function(ticker,from,to){
   c=codecs$encode(r$text)
   c=c$decode('UTF-8-SIG')
   data=json$loads(c)
-  df0=pd$json_normalize(data)
+  df0=pd$io$json$json_normalize(data)
   df = pd$DataFrame(df0$result)
   df=t(df)
   Date=rep(list(NULL),length(df))
@@ -388,3 +388,4 @@ daily.data=function(ticker,from,to){
   return(df)
 
 }
+
