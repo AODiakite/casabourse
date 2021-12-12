@@ -1,8 +1,7 @@
 Package: casabourse
 Title: Casablanca Stock Exchange Data
 Version: 0.1.0
-Author: DIAKITE ABDOUL OUDOUSS
-Maintainer: DIAKITE ABDOUL OUDOUSS <abdouloudoussdiakite@gmail.com>
+Authors@R: person("Oudouss", "DIAKITE", role = c("aut", "cre"), email = "abdouloudoussdiakite@gmail.com")
 Depends: R (>= 3.4.3)
 Description: To facilitate access to data from the Casablanca stock exchange, I decided to set up a package that could collect the data just by calling functions.
 License: GPL-2
@@ -17,3 +16,7 @@ Imports:
     stats,
     stringr,
     usethis
+Suggests: 
+    rmarkdown,
+    knitr
+VignetteBuilder: knitr

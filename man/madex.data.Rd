@@ -12,6 +12,3 @@ a data.frame
 \description{
 Mdex Data
 }
-\examples{
-madex.data()
-}

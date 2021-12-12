@@ -128,17 +128,21 @@ today.prizelist=function(up_or_down){
 instruments=function(){
   instru=gsheet2tbl('https://docs.google.com/spreadsheets/d/13COW6CoojBm-6f4SmhHpnYgBsSd2m528J0qiwyDYoaM/edit?usp=sharing')
   instru=instru[,-seq(1,9,2)]
-  instru=na.omit(instru)
+  instru=stats::na.omit(instru)
   colnames(instru)=instru[1,]
   instru=instru[-1,]
   return(instru)
 
 }
 
+#' today.transactions
+#'
+#' @return data.frame
+#' @export
 today.transactions=function(){
   trans=gsheet2tbl("https://docs.google.com/spreadsheets/d/10BxmdDLzWHV2WOIYwSewp-G_gs-XOxvxFoZc5DWUAqk/edit?usp=sharing")
   trans=trans[,-seq(1,9,2)]
-  trans=na.omit(trans)
+  trans=stats::na.omit(trans)
   colnames(trans)=trans[1,]
   trans=trans[-1,]
   return(trans)

@@ -6,8 +6,6 @@ reticulate::py_install("bs4")
 #'
 #' @return a data.frame
 #' @export
-#'
-#' @examples madex.data()
 madex.data=function(){
   pd=reticulate::import("pandas")
   bs4=reticulate::import("bs4")
