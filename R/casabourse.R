@@ -134,3 +134,13 @@ instruments=function(){
   return(instru)
 
 }
+
+today.transactions=function(){
+  trans=gsheet2tbl("https://docs.google.com/spreadsheets/d/10BxmdDLzWHV2WOIYwSewp-G_gs-XOxvxFoZc5DWUAqk/edit?usp=sharing")
+  trans=trans[,-seq(1,9,2)]
+  trans=na.omit(trans)
+  colnames(trans)=trans[1,]
+  trans=trans[-1,]
+  return(trans)
+}
+
