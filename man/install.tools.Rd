@@ -7,5 +7,5 @@
 install.tools()
 }
 \description{
-install.tools
+For a first use of the package, you must perform this function that will automatically download all the dependencies you need
 }

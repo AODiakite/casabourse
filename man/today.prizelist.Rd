@@ -13,5 +13,5 @@ today.prizelist(up_or_down)
 data.frame
 }
 \description{
-today.prizelist
+It receives '' up '' or '' down '' respectively and returns a table prizelist of rising or falling prices of market instruments
 }

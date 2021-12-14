@@ -10,5 +10,5 @@ today.market()
 data.frame
 }
 \description{
-today.market
+is without argument and returns the current price of financial instruments as well as their variations, their opening prices, their max etc.
 }

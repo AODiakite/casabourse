@@ -10,5 +10,5 @@ bySector()
 data.frame
 }
 \description{
-bySector
+It returns a table containing data by industry. It is a function without arguments.
 }

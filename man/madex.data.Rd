@@ -10,5 +10,5 @@ madex.data()
 a data.frame
 }
 \description{
-Mdex Data
+By equivalence to the function masi.data, madex.data returns a data table of the MADEX index.
 }

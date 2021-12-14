@@ -5,6 +5,7 @@ reticulate::py_install("bs4")
 #' Mdex Data
 #'
 #' @return a data.frame
+#' @description By equivalence to the function masi.data, madex.data returns a data table of the MADEX index.
 #' @export
 madex.data=function(){
   pd=reticulate::import("pandas")
@@ -293,12 +294,12 @@ madex.data=function(){
 
 
 
-#' Title
+#' Daily data
 #'
-#' @param ticker put ticker
-#' @param from from date
-#' @param to to date
-#'
+#' @param ticker ticker that matches the title that interests us (to remind you know all the tickers of the securities through the tickers() function)
+#' @param from It represents the start date of data collection. This argument is of the type '' day-month-year ''.
+#' @param to It represents the date of stopping data collection. This argument is of the type '' day-month-year ''.
+#' @description As its name suggests, this function returns the daily prices of a security between two dates given by the user. It receives three arguments.
 #' @return data frame
 #' @export
 daily.data=function(ticker,from,to){

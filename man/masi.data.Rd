@@ -10,5 +10,5 @@ masi.data()
 data.frame
 }
 \description{
-masi.data
+This is a function for downloading data from the MASI index. It returns a given table.
 }

@@ -15,5 +15,5 @@ gsheet2tbl(url, sheetid = NULL)
 data.frame
 }
 \description{
-gsheet2tbl
+It receives a link from a Google sheet spreadsheet as an argument and automatically reads the data that is there in the form of a table without having to download the sheet to your computer.
 }

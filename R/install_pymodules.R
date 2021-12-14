@@ -1,7 +1,6 @@
 #' install.tools
+#' @description For a first use of the package, you must perform this function that will automatically download all the dependencies you need
 #' @export
-#'
-#' @examples
 install.tools=function(){
   reticulate::py_install("pandas")
   reticulate::py_install("bs4")

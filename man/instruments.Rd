@@ -10,5 +10,5 @@ instruments()
 data.frame
 }
 \description{
-instruments
+It is without argument and gives us information on the financial instruments of the market, such as the ISIN code, the sub-fund, the number of securities etc.
 }

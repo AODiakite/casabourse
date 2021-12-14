@@ -10,5 +10,5 @@ tickers()
 data.frame
 }
 \description{
-tickers
+This function takes no arguments and returns a data table associating each company with a ticker. It is important to visualize the tickers. Indeed, they are used by the other functions of the package to represent the companies to which they correspond.
 }

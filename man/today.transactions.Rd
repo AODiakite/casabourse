@@ -10,5 +10,5 @@ today.transactions()
 data.frame
 }
 \description{
-today.transactions
+It allows you to obtain a table of transactions for the day. It is a function without arguments.
 }

@@ -2,20 +2,20 @@
 % Please edit documentation in R/pythonFile.R
 \name{daily.data}
 \alias{daily.data}
-\title{Title}
+\title{Daily data}
 \usage{
 daily.data(ticker, from, to)
 }
 \arguments{
-\item{ticker}{put ticker}
+\item{ticker}{ticker that matches the title that interests us (to remind you know all the tickers of the securities through the tickers() function)}
 
-\item{from}{from date}
+\item{from}{It represents the start date of data collection. This argument is of the type '' day-month-year ''.}
 
-\item{to}{to date}
+\item{to}{It represents the date of stopping data collection. This argument is of the type '' day-month-year ''.}
 }
 \value{
 data frame
 }
 \description{
-Title
+As its name suggests, this function returns the daily prices of a security between two dates given by the user. It receives three arguments.
 }

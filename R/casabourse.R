@@ -6,7 +6,6 @@
 #' @param sheetid bool default TRUE
 #'
 #' @return text
-#' @export
 construct_download_url <- function(url, format='csv', sheetid = NULL){
   key <- stringr::str_extract(url, '[[:alnum:]_-]{30,}')
   if(is.null(sheetid) & stringr::str_detect(url, 'gid=[[:digit:]]+')){
@@ -25,6 +24,7 @@ construct_download_url <- function(url, format='csv', sheetid = NULL){
 #' @param url link
 #' @param sheetid bool default TRUE
 #' @return data.frame
+#' @description It receives a link from a Google sheet spreadsheet as an argument and automatically reads the data that is there in the form of a table without having to download the sheet to your computer.
 #' @export
 gsheet2tbl <- function(url, sheetid = NULL){
   if(requireNamespace('readr', quietly=TRUE)){
@@ -41,7 +41,7 @@ gsheet2tbl <- function(url, sheetid = NULL){
 #' @param url link
 #' @param format a format like csv...
 #' @param sheetid bool default TRUE
-#'
+#' @description It receives a link from a Google sheet spreadsheet as an argument and automatically reads the data therein in text form without having to download the sheet to your computer.
 #' @return text
 #' @export
 gsheet2text <- function(url, format='csv', sheetid = NULL){
@@ -58,6 +58,7 @@ gsheet2text <- function(url, format='csv', sheetid = NULL){
 #'
 #'
 #' @return data.frame
+#' @description This is a function for downloading data from the MASI index. It returns a given table.
 #' @export
 masi.data=function(){
   df=gsheet2tbl("https://docs.google.com/spreadsheets/d/1OepCwQ1w4htUL5YvIiCMUAR3KCICdACKouy2uppii0Y/edit?usp=sharing")
@@ -74,6 +75,7 @@ masi.data=function(){
 #'
 #'
 #' @return data.frame
+#' @description This function takes no arguments and returns a data table associating each company with a ticker. It is important to visualize the tickers. Indeed, they are used by the other functions of the package to represent the companies to which they correspond.
 #' @export
 tickers=function(){
   return(gsheet2tbl("https://docs.google.com/spreadsheets/d/1o8IgWa040xazF3QFoFidMcR1xqOT36CtKswQRZeEmws/edit?usp=sharing"))
@@ -83,6 +85,7 @@ tickers=function(){
 #'
 #'
 #' @return data.frame
+#' @description It returns a table containing data by industry. It is a function without arguments.
 #' @export
 bySector=function(){
   return(gsheet2tbl("https://docs.google.com/spreadsheets/d/1gYSo8SnPLs2xN96j1KPa5_ESIay_Tew779kJ7vBHiYY/edit?usp=sharing"))
@@ -92,6 +95,7 @@ bySector=function(){
 #'
 #'
 #' @return data.frame
+#' @description is without argument and returns the current price of financial instruments as well as their variations, their opening prices, their max etc.
 #' @export
 today.market=function(){
   return(gsheet2tbl("https://docs.google.com/spreadsheets/d/1WKZphnEyC7RcSbfY_4d3kCRoEskCGY1umKOwMqoaHqM/edit?usp=sharing"))
@@ -102,6 +106,7 @@ today.market=function(){
 #' @param up_or_down rise or fall prize list
 #'
 #' @return data.frame
+#' @description It receives '' up '' or '' down '' respectively and returns a table prizelist of rising or falling prices of market instruments
 #' @export
 today.prizelist=function(up_or_down){
   if(up_or_down=="up"){
@@ -124,6 +129,7 @@ today.prizelist=function(up_or_down){
 #'
 #'
 #' @return data.frame
+#' @description It is without argument and gives us information on the financial instruments of the market, such as the ISIN code, the sub-fund, the number of securities etc.
 #' @export
 instruments=function(){
   instru=gsheet2tbl('https://docs.google.com/spreadsheets/d/13COW6CoojBm-6f4SmhHpnYgBsSd2m528J0qiwyDYoaM/edit?usp=sharing')
@@ -138,6 +144,7 @@ instruments=function(){
 #' today.transactions
 #'
 #' @return data.frame
+#' @description It allows you to obtain a table of transactions for the day. It is a function without arguments.
 #' @export
 today.transactions=function(){
   trans=gsheet2tbl("https://docs.google.com/spreadsheets/d/10BxmdDLzWHV2WOIYwSewp-G_gs-XOxvxFoZc5DWUAqk/edit?usp=sharing")

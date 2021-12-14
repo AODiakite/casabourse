@@ -17,5 +17,5 @@ gsheet2text(url, format = "csv", sheetid = NULL)
 text
 }
 \description{
-gsheet2txt
+It receives a link from a Google sheet spreadsheet as an argument and automatically reads the data therein in text form without having to download the sheet to your computer.
 }
