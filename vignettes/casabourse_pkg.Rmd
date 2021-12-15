@@ -1,19 +1,20 @@
 ---
-title: "Introduction to casabourse"
+title: "Casabourse"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Introduction to casabourse}
-  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: inline
 ---
-
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
 ```
-
 ```{r setup}
 library(casabourse)
 ```
+
