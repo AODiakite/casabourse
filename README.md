@@ -27,7 +27,7 @@ Une fois que vous avez installé casabourse, vous devez appeler la fonction **in
 ```r
 library(casabourse)
 install.tools()
-# Si ">>>" apparait, inserer le mot exit, appuyer sur entrer puis laisser le telechargement sur poursuivre jusqu'à l'apparution de '>'
+# Si ">>>" apparait, inserer le mot exit, appuyer sur entrer puis laisser le telechargement sur poursuivre jusqu'à l'apparition de '>'
 ```
 
 
@@ -84,11 +84,11 @@ head(ms) #afichage des premiers elements de la table
 
 ## La fonction **madex.data()**
  
-Par équivalence à la fonction masi.data(), madex.dat() retourne une table de données de l’indice MADEX.
+Par équivalence à la fonction masi.data(), madex.data() retourne une table de données de l’indice MADEX.
 
 ```r
 #' Affichage des données de MADEX
-mx <- madex.data() #affection de la table MADEX a la variable ma
+mx <- madex.data() #affection de la table MADEX a la variable mx
 head(mx) #afichage des premiers elements de la table
 ```
 
@@ -116,7 +116,7 @@ Comme son nom l’indique, cette fonction renvoie les cours journaliers d’un t
 * ticker : qui correspond au ticker du titre qui nous intéresse ( pour rappelle vous pouvez connaitre tous les tickers des titres grâce à la fonction tickers() )
 * from : représente la date de début de collecte de données. Cet argument est du type ‘’jour-mois-année’’.
 * to : représente la date d’arrêt de collecte de données. Cet argument est du type ‘’jour-mois-année’’.
-NB : Les week-end ne sont pas pris en compte lors du téléchargement des données et en plus Il est important de mettre chaque argument entre des doubles quotes( ‘’ ‘’)
+NB : Les week-end ne sont pas pris en compte lors du téléchargement des données et en plus Il est important de mettre chaque argument entre des doubles quotes(" ")
 
 
 ```r
