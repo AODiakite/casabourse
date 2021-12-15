@@ -116,7 +116,7 @@ Comme son nom l’indique, cette fonction renvoie les cours journaliers d’un t
 * ticker : qui correspond au ticker du titre qui nous intéresse ( pour rappelle vous pouvez connaitre tous les tickers des titres grâce à la fonction tickers() )
 * from : représente la date de début de collecte de données. Cet argument est du type ‘’jour-mois-année’’.
 * to : représente la date d’arrêt de collecte de données. Cet argument est du type ‘’jour-mois-année’’.
-NB : Les week-end ne sont pas pris en compte lors du téléchargement des données et en plus Il est important de mettre chaque argument entre des doubles quotes(" ")
+NB : Les week-end ne sont pas pris en compte lors du téléchargement des données et en plus, il est important de mettre chaque argument entre des doubles quotes(" ")
 
 
 ```r
@@ -220,7 +220,7 @@ today.prizelist('up')
 ## 12 SODEP      +0,90%        281,00  282,00    282,00   279,15      1488 417 513…
 ```
 
-> - **today.market()** : est sans argument et renvoie le cours actuel des instruments financier ainsi que leurs variations, leurs cours à l’ouverture, leurs max etc.
+> - **today.market()** : est sans argument et renvoie le cours actuel des instruments financiers ainsi que leurs variations, leurs cours à l’ouverture, leurs max etc.
 
 ```r
 #Affichage des données du marché d'aujourd'hui
