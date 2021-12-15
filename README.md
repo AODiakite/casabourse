@@ -2,11 +2,6 @@
 title: "Library Casabourse"
 author: "ABDOUL OUDOUSS DIAKITE"
 date: "15 décembre,2021"
-output:
-  html_document:
-    toc: yes
-    theme: united
-    keep_md: true
 ---
 
 
