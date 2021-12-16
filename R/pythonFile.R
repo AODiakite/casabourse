@@ -289,7 +289,7 @@ madex.data=function(){
   return(df)
 }
 
-#' Title
+#' MSI20
 #'
 #' @return returns a data frame of the MSI20 index
 #' @export
