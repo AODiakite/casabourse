@@ -2,7 +2,7 @@
 % Please edit documentation in R/pythonFile.R
 \name{msi20.data}
 \alias{msi20.data}
-\title{Title}
+\title{MSI20}
 \usage{
 msi20.data()
 }
@@ -10,5 +10,5 @@ msi20.data()
 returns a data frame of the MSI20 index
 }
 \description{
-Title
+MSI20
 }
