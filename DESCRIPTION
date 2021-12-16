@@ -1,7 +1,12 @@
 Package: casabourse
 Title: Casablanca Stock Exchange Data
-Version: 0.1.0
-Authors@R: person("DIAKITE", "Oudouss", email = "diakite.oudouss@gmail.com", role = c("aut", "cre"))
+Version: 0.0.0.900
+Authors@R:
+    c(person(given = "Oudouss",
+             family = "Diakite",
+             role = c("aut", "cre"),
+             email = "diakite.oudouss@gmail.com",
+             comment = c(ORCID = "0000-0001-8049-7069")))
 Depends: R (>= 3.4.3)
 Description: It is an R package that provides real-time data from the Casablanca Stock Exchange. The objective is to facilitate access to data for all users of the R programming language. It includes a variety of data accessible just by function call.
 License: GPL-2
@@ -9,13 +14,13 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.2
 Imports: 
-    httr,
     Matrix,
     reticulate,
     readr,
     stats,
     stringr,
-    usethis
+    usethis,
+    httr
 Suggests: 
     rmarkdown,
     knitr

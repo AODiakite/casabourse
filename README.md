@@ -1,12 +1,20 @@
 ---
 title: "Library Casabourse"
 author: "ABDOUL OUDOUSS DIAKITE"
-date: "15 décembre,2021"
+date: "16 décembre,2021"
 output:
-  html_document:
+  html_document: 
     toc: yes
-    theme: united
-    keep_md: true
+    fig_caption: yes
+    keep_md: yes
+    fig_width: 10
+    fig_height: 10
+  word_document: 
+    toc: yes
+  pdf_document:
+    keep_tex: yes
+    toc: yes
+always_allow_html: true
 ---
 
 
@@ -32,7 +40,7 @@ Une fois que vous avez installé casabourse, vous devez appeler la fonction **in
 ```r
 library(casabourse)
 install.tools()
-# Si ">>>" apparait, inserer le mot exit, appuyer sur entrer puis laisser le telechargement sur poursuivre jusqu'à l'apparution de '>'
+# Si ">>>" apparait, inserer le mot exit, appuyer sur entrer puis laisser le telechargement sur poursuivre jusqu'à l'apparition de '>'
 ```
 
 
@@ -62,7 +70,41 @@ tickers()
 ## # … with 66 more rows
 ```
 
+## La fonction **msi20.data()**
  
+C’est une fonction permettant de télécharger les données de l’indice MSI20. Elle renvoie une table de  données.
+
+```r
+msi20 <- msi20.data() #affection de la table MSI20 a la variable ms
+msi20 #afichage des premiers elements de la table
+```
+
+```
+## # A tibble: 20 × 6
+##    Libellé              Place      Cours Quantité `Var.(%)` Date      
+##    <chr>                <chr>      <dbl> <chr>    <chr>     <chr>     
+##  1 ATLANTASANAD         Casablanca   116 -        -         15/12/2021
+##  2 ATTIJARIWAFA BANK    Casablanca  4826 -        -         15/12/2021
+##  3 BANK OF AFRICA       Casablanca   187 -        -         15/12/2021
+##  4 BCP                  Casablanca   277 -        -         15/12/2021
+##  5 CIMENTS DU MAROC     Casablanca  1860 -        -         15/12/2021
+##  6 COSUMAR              Casablanca 26295 -        -         15/12/2021
+##  7 DISWAY               Casablanca   704 -        -         15/12/2021
+##  8 DOUJA PROM ADDOHA    Casablanca  1073 -        -         15/12/2021
+##  9 HPS                  Casablanca  6780 -        -         15/12/2021
+## 10 ITISSALAT AL-MAGHRIB Casablanca  1419 -        -         15/12/2021
+## 11 LABEL VIE            Casablanca  4750 -        -         15/12/2021
+## 12 LAFARGEHOLCIM MAROC  Casablanca  2175 -        -         15/12/2021
+## 13 MANAGEM              Casablanca  1610 -        -         15/12/2021
+## 14 MICRODATA            Casablanca   630 -        -         15/12/2021
+## 15 MUTANDIS SCA         Casablanca 24515 -        -         15/12/2021
+## 16 SMI                  Casablanca  1522 -        -         15/12/2021
+## 17 SNEP                 Casablanca   744 -        -         15/12/2021
+## 18 SODEP-Marsa Maroc    Casablanca  2781 -        -         15/12/2021
+## 19 SONASID              Casablanca   624 -        -         15/12/2021
+## 20 TAQA MOROCCO         Casablanca  1100 -        -         15/12/2021
+```
+
 ## La fonction **masi.data()**
  
 C’est une fonction permettant de télécharger les données de l’indice MASI. Elle renvoie une table de  données.
@@ -77,19 +119,19 @@ head(ms) #afichage des premiers elements de la table
 ## # A tibble: 6 × 8
 ##   `Code Isin`  Instrument           `Nombre de titres` Cours    `Facteur flotta…
 ##   <chr>        <chr>                <chr>              <chr>    <chr>           
-## 1 MA0000012445 ATTIJARIWAFA BANK    215 140 839,00     482,10   0,30            
+## 1 MA0000012445 ATTIJARIWAFA BANK    215 140 839,00     483,50   0,30            
 ## 2 MA0000011488 ITISSALAT AL-MAGHRIB 879 095 340,00     142,10   0,20            
 ## 3 MA0000012320 LAFARGEHOLCIM MAR    23 431 240,00      2 170,00 0,30            
-## 4 MA0000011884 BCP                  203 312 473,00     280,00   0,20            
-## 5 MA0000012247 COSUMAR              94 487 143,00      266,00   0,40            
-## 6 MA0000012437 BANK OF AFRICA       205 606 648,00     186,05   0,25            
+## 4 MA0000011884 BCP                  203 312 473,00     277,00   0,20            
+## 5 MA0000012247 COSUMAR              94 487 143,00      267,95   0,40            
+## 6 MA0000012437 BANK OF AFRICA       205 606 648,00     187,95   0,25            
 ## # … with 3 more variables: Facteur de plafonnement <chr>,
 ## #   Capitalisation flottante <chr>, Poids <chr>
 ```
 
 ## La fonction **madex.data()**
  
-Par équivalence à la fonction masi.data(), madex.dat() retourne une table de données de l’indice MADEX.
+Par équivalence à la fonction masi.data(), madex.data() retourne une table de données de l’indice MADEX.
 
 ```r
 #' Affichage des données de MADEX
@@ -152,18 +194,18 @@ bySector()
 
 ```
 ## # A tibble: 23 × 4
-##    Secteur                              Valeur    `Var %` `Var % 31/12`
-##    <chr>                                <chr>     <chr>   <chr>        
-##  1 SERVICES DE TRANSPORT                4 323,08  0,90 %  33,81 %      
-##  2 AGROALIMENTAIRE / PRODUCTION         37 313,82 0,46 %  20,52 %      
-##  3 BATIMENT & MATERIAUX DE CONSTRUCTION 21 052,60 0,08 %  26,68 %      
-##  4 BANQUES                              13 994,25 0,08 %  14,64 %      
-##  5 DISTRIBUTEURS                        46 477,84 -       47,70 %      
-##  6 ELECTRICITE                          2 458,10  -       20,22 %      
-##  7 INDUSTRIE PHARMACEUTIQUE             8 374,70  -       182,35 %     
-##  8 LOISIRS ET HOTELS                    484,24    -       -6,14 %      
-##  9 TELECOMMUNICATIONS                   2 085,60  -       -2,00 %      
-## 10 TRANSPORT                            2 512,59  -       5,76 %       
+##    Secteur                                      Valeur    `Var %` `Var % 31/12`
+##    <chr>                                        <chr>     <chr>   <chr>        
+##  1 PETROLE & GAZ                                21 366,37 3,42 %  43,07 %      
+##  2 BOISSONS                                     15 881,44 2,39 %  11,23 %      
+##  3 INGENIERIES & BIENS D’EQUIPEMENT INDUSTRIELS 121,80    1,89 %  81,01 %      
+##  4 SOCIETES DE PLACEMENT IMMOBILIER             984,49    1,17 %  6,54 %       
+##  5 CHIMIE                                       6 500,81  1,16 %  63,44 %      
+##  6 MINES                                        25 648,92 0,36 %  21,08 %      
+##  7 SOCIETES DE PORTEFEUILLES - HOLDINGS         4 932,88  0,30 %  -6,80 %      
+##  8 BATIMENT & MATERIAUX DE CONSTRUCTION         21 100,13 0,23 %  26,97 %      
+##  9 ELECTRICITE                                  2 458,10  -       20,22 %      
+## 10 LOISIRS ET HOTELS                            484,24    -       -6,14 %      
 ## # … with 13 more rows
 ```
 
@@ -208,21 +250,27 @@ today.prizelist('up')
 ```
 
 ```
-## # A tibble: 12 × 8
-##    Valeur     `Variation %` Cours   Ouverture `+ Haut` `+ Bas` Quantité Volume  
-##    <chr>      <chr>         <chr>   <chr>     <chr>    <chr>      <dbl> <chr>   
-##  1 Aluminium… +0,36%        1 400,… 1 400,00  1 400,00 1 400,…        4 5 600,00
-##  2 ATLANTASA… +0,09%        116,10  115,00    117,00   115,00     23760 2 755 9…
-##  3 Attijariw… +0,29%        483,50  483,50    486,00   483,50     26761 12 990 …
-##  4 Auto Hall  +0,09%        105,80  105,00    105,80   105,00      1120 117 690…
-##  5 BoA        +1,02%        187,95  186,05    187,95   186,00      2526 472 491…
-##  6 Cartier S… +0,03%        30,09   30,09     30,09    30,09         35 1 053,15
-##  7 Ciments M… +0,27%        1 855,… 1 860,00  1 860,00 1 855,…       45 83 585,…
-##  8 COSUMAR    +0,73%        267,95  265,00    267,95   263,00     83240 21 957 …
-##  9 DISWAY     +0,15%        685,00  685,00    685,00   672,00       201 137 672…
-## 10 Resid Dar… +1,72%        29,50   29,80     29,80    28,64       6456 186 851…
-## 11 Saham Ass… +1,02%        1 484,… 1 484,00  1 484,00 1 484,…       90 133 560…
-## 12 SODEP      +0,90%        281,00  282,00    282,00   279,15      1488 417 513…
+## # A tibble: 18 × 8
+##    Valeur      `Variation %` Cours   Ouverture `+ Haut` `+ Bas` Quantité Volume 
+##    <chr>       <chr>         <chr>   <chr>     <chr>    <chr>      <dbl> <chr>  
+##  1 Afriquia G… +3,99%        5 211,… 5 211,00  5 211,00 5 211,…       10 52 110…
+##  2 Aradei Cap… +0,95%        409,00  409,00    409,00   409,00         6 2 454,…
+##  3 Ciments Ma… +0,27%        1 860,… 1 860,00  1 860,00 1 860,…       26 48 360…
+##  4 Delattre L… +5,15%        51,90   51,88     51,90    51,88        315 16 342…
+##  5 Delta Hold… +0,31%        32,49   32,49     32,49    32,49      11666 379 02…
+##  6 DISWAY      +2,77%        704,00  676,10    704,00   674,00       314 216 04…
+##  7 FENIE BROS… +0,26%        154,40  150,00    154,40   148,10       293 43 617…
+##  8 IBMaroc.com +5,99%        33,45   33,00     33,45    32,99        220 7 322,…
+##  9 Immorente   +1,90%        102,00  102,00    102,00   101,00      1791 180 90…
+## 10 INVOLYS     +1,85%        126,90  126,90    126,90   126,90         2 253,80 
+## 11 Jet Contra… +0,40%        239,95  239,95    239,95   239,95         5 1 199,…
+## 12 LafargeHol… +0,23%        2 175,… 2 175,00  2 175,00 2 150,…        6 12 952…
+## 13 Maghreb Ox… +2,91%        404,95  404,95    404,95   404,95         1 404,95 
+## 14 Managem     +0,62%        1 610,… 1 610,00  1 610,00 1 610,…      150 241 50…
+## 15 Mutandis    +0,02%        245,15  246,00    246,00   245,05       253 62 103…
+## 16 SNEP        +1,00%        744,00  735,00    750,00   734,90       193 142 88…
+## 17 Ste Boisso… +2,88%        2 820,… 2 820,00  2 820,00 2 820,…      284 800 88…
+## 18 TotalEnerg… +2,34%        1 750,… 1 750,00  1 750,00 1 750,…      400 700 00…
 ```
 
 > - **today.market()** : est sans argument et renvoie le cours actuel des instruments financier ainsi que leurs variations, leurs cours à l’ouverture, leurs max etc.
@@ -234,18 +282,18 @@ today.market()
 
 ```
 ## # A tibble: 75 × 9
-##    Valeur   `Date/Heure` Ouverture Cours `Variation %` Quantité Volume  `+ Haut`
-##    <chr>    <chr>        <chr>     <chr> <chr>            <dbl> <chr>   <chr>   
-##  1 Addoha   14.12.2021   11,18     10,99 -1,88%          148431 1 634 … 11,24   
-##  2 AFMA     14.12.2021   1 319,00  1 31… 0,00%                1 1 319,… 1 319,00
-##  3 Afric I… 14.12.2021   345,00    345,… 0,00%                3 1 035,… 345,00  
-##  4 Afriqui… 14.12.2021   5 011,00  5 01… 0,00%               14 70 154… 5 011,00
-##  5 Agma     14.12.2021   4 266,00  4 26… 0,00%               23 98 118… 4 266,00
-##  6 Allianc… 14.12.2021   40,00     40,00 0,00%            25552 1 023 … 40,50   
-##  7 Alumini… 14.12.2021   1 400,00  1 40… +0,36%               4 5 600,… 1 400,00
-##  8 Aradei … 14.12.2021   405,15    405,… 0,00%             1731 701 31… 405,15  
-##  9 ATLANTA… 14.12.2021   115,00    116,… +0,09%           23760 2 755 … 117,00  
-## 10 Attijar… 14.12.2021   483,50    483,… +0,29%           26761 12 990… 486,00  
+##    Valeur   `Date/Heure` Ouverture Cours  `Variation %` Quantité Volume `+ Haut`
+##    <chr>    <chr>        <chr>     <chr>  <chr>            <dbl> <chr>  <chr>   
+##  1 Addoha   15.12.2021   10,98     10,73  -2,37%          337344 3 620… 10,98   
+##  2 AFMA     15.12.2021   1 319,00  1 319… 0,00%                1 1 319… 1 319,00
+##  3 Afric I… 15.12.2021   345,00    344,00 -0,29%           24668 8 485… 345,00  
+##  4 Afriqui… 15.12.2021   5 211,00  5 211… +3,99%              10 52 11… 5 211,00
+##  5 Agma     15.12.2021   4 266,00  4 266… 0,00%               23 98 11… 4 266,00
+##  6 Allianc… 15.12.2021   39,82     39,80  -0,50%            1630 64 85… 39,95   
+##  7 Alumini… 15.12.2021   1 400,00  1 400… 0,00%                1 1 400… 1 400,00
+##  8 Aradei … 15.12.2021   409,00    409,00 +0,95%               6 2 454… 409,00  
+##  9 ATLANTA… 15.12.2021   116,10    116,00 -0,09%              84 9 708… 116,10  
+## 10 Attijar… 15.12.2021   482,10    482,60 -0,19%           18738 9 031… 482,60  
 ## # … with 65 more rows, and 1 more variable: + Bas <chr>
 ```
 
@@ -260,16 +308,16 @@ today.transactions()
 ## # A tibble: 50 × 5
 ##    Heure    `Insturment financier` Cours    Quantité Volume    
 ##    <chr>    <chr>                  <chr>    <chr>    <chr>     
-##  1 15:38:03 MANAGEM                1 600,00 10,00    16 000,00 
-##  2 15:36:30 LESIEUR CRISTAL        187,30   12,00    2 247,60  
-##  3 15:36:15 DOUJA PROM ADDOHA      10,99    10,00    109,90    
-##  4 15:36:06 ATLANTASANAD           116,10   485,00   56 308,50 
-##  5 15:35:40 ATLANTASANAD           116,10   200,00   23 220,00 
-##  6 15:34:30 ATTIJARIWAFA BANK      483,50   300,00   145 050,00
-##  7 15:34:22 DOUJA PROM ADDOHA      10,99    200,00   2 198,00  
-##  8 15:33:35 ITISSALAT AL-MAGHRIB   142,10   400,00   56 840,00 
-##  9 15:32:47 MED PAPER              25,67    10,00    256,70    
-## 10 15:32:25 ITISSALAT AL-MAGHRIB   142,10   1,00     142,10    
+##  1 15:38:56 COSUMAR                262,95   1,00     262,95    
+##  2 15:38:40 ITISSALAT AL-MAGHRIB   141,90   1 000,00 141 900,00
+##  3 15:38:17 STOKVIS NORD AFRIQUE   16,99    485,00   8 240,15  
+##  4 15:38:17 STOKVIS NORD AFRIQUE   16,99    15,00    254,85    
+##  5 15:37:48 STOKVIS NORD AFRIQUE   16,99    500,00   8 495,00  
+##  6 15:37:17 COSUMAR                262,95   1 900,00 499 605,00
+##  7 15:37:15 COSUMAR                262,95   3,00     788,85    
+##  8 15:37:01 AUTO HALL              105,00   10,00    1 050,00  
+##  9 15:37:00 ATTIJARIWAFA BANK      482,60   300,00   144 780,00
+## 10 15:36:39 CIMENTS DU MAROC       1 860,00 25,00    46 500,00 
 ## # … with 40 more rows
 ```
 
@@ -278,6 +326,66 @@ today.transactions()
  
 Ce package contient aussi des fonctions annexes très utiles. Parmi elles :
 
-> - **install.tools()** : pour une première utilisation du package, vous devez exécuter cette fonction qui permettra de télécharger automatiquement toutes les dépendances dont vous aurez besoin
-> - **gsheet2tbl("url")** : reçoit un lien d’une feuille de calcul Google sheet comme argument et permet de lire automatique les données qui s’y trouve sous forme d’une table sans avoir à télécharger la feuille dans votre ordinateur.
-> - **gsheet2txtl("url")** : reçoit un lien d’une feuille de calcul Google sheet comme argument et permet de lire automatique les données qui s’y trouve sous forme de texte sans avoir à télécharger la feuille dans votre ordinateur.
+> - **install.tools()** : pour une première utilisation du package, vous devez exécuter cette fonction qui permettra de télécharger automatiquement toutes les dépendances dont vous aurez besoin.
+> - **gsheet2tbl("url")** : reçoit un lien d’une feuille de calcul Google sheet comme argument et permet de lire automatiquement les données qui s’y trouve sous forme d’une table sans avoir à télécharger la feuille dans votre ordinateur.
+> - **gsheet2txtl("url")** : reçoit un lien d’une feuille de calcul Google sheet comme argument et permet de lire automatiquement les données qui s’y trouve sous forme de texte sans avoir à télécharger la feuille dans votre ordinateur.
+
+## Exemples d'utilisations de la library(casabourse) :
+> - Nous allons tracer la courbe de variations des cours des titres de Attijariwafa Bank et de la Banque Populaire du Maroc entre le début de l’année 2020 et le 15 décembre 2021.
+
+
+
+```r
+#lecture des données de Attijariwafa Bank
+atw <- daily.data(ticker = "ATW", from = "01-01-2020", to = "15-12-2021")
+#lecture des données de la Banque Populaire du Maroc
+bcp <- daily.data(ticker = "BCP", from = "01-01-2020", to = "15-12-2021")
+data=data.frame(atw,bcp)
+
+plt <- plot_ly(data = data, x=~as.Date(rownames(data)), y=~data$Value, 
+               name = "Attijariwafa Bank", type = 'scatter', mode = 'lines') 
+
+plt <- plt %>% add_trace(y=~data$Value.1,name = "Banque Populaire du Maroc" )
+plt <- plt %>% layout(title= 'Variation des cours',
+                      xaxis = list(title = 'Dates'), yaxis = list(title = 'Cours'))
+plt
+```
+
+
+
+> - Traçons maintenant la courbe des taux de rentabilités des titres de Attijariwafa Bank et de la Banque Populaire du Maroc entre le 15 octobre 2021 et le 15 décembre 2021.
+
+
+```r
+#function de return
+rent=function(x){
+  r=list(0)
+  for (i in 2:length(x)) {
+    
+    r[i]=(x[i]/x[i-1] -1)*100
+  }
+  return(t(data.frame(r)))
+}
+#lecture des données de Attijariwafa Bank
+atw <- daily.data(ticker = "ATW", from = "15-10-2021", to = "15-12-2021")
+#lecture des données de la Banque Populaire du Maroc
+bcp <- daily.data(ticker = "BCP", from = "15-10-2021", to = "15-12-2021")
+#Utilisation de la function rent
+returnATW=rent(as.numeric(atw$Value))
+returnBCP=rent(as.numeric(bcp$Value))
+
+#Traçage de la courbe
+df=data.frame(returnATW,returnBCP)
+rownames(df)=rownames(atw)
+plt <- plot_ly(data = df, x=~as.Date(rownames(df)), y=~df$returnATW, 
+               name = "Attijariwafa Bank", type = 'scatter', mode = 'lines') 
+
+plt <- plt %>% add_trace(y=~df$returnBCP,name = "Banque Populaire du Maroc" )
+plt <- plt %>% layout(title= 'Variation des renatbilités',
+                      xaxis = list(title = 'Dates'), 
+                      yaxis = list(title = 'Returns'))
+plt
+```
+
+
+
