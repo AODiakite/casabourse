@@ -32,7 +32,7 @@ Ce package est disponible sur [github](https://github.com/AODiakite/casabourse) 
 #Installez les packages devtools et reticulate si vous ne les avez pas déjà
 library(devtools)
 library(reticulate)
-devtools::install("AODiakite/casabourse")
+devtools::install_github("AODiakite/casabourse")
 ```
 
 Une fois que vous avez installé casabourse, vous devez appeler la fonction **install.tools** qui installera toutes les dépendences du package.
