@@ -1,3 +1,4 @@
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
 
 ![CRAN/METACRAN](https://img.shields.io/cran/v/casabourse)
 ![CRAN/METACRAN](https://img.shields.io/cran/l/casabourse)
