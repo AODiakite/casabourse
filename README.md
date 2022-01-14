@@ -319,6 +319,7 @@ plt <- plt %>% layout(title= 'Variation des cours',
                       xaxis = list(title = 'Dates'), yaxis = list(title = 'Cours'))
 plt
 ```
+![alt text](https://github.com/AODiakite/casabourse/blob/main/newplot%20(4).png)
 
 
 
@@ -355,6 +356,6 @@ plt <- plt %>% layout(title= 'Variation des renatbilités',
                       yaxis = list(title = 'Returns'))
 plt
 ```
-
+![alt text](https://github.com/AODiakite/casabourse/blob/main/newplot%20(5).png)
 
 
