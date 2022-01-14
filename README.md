@@ -1,7 +1,6 @@
-![alt text](https://github.com/AODiakite/casabourse/blob/main/casabourse.png)
-
 ![CRAN/METACRAN](https://img.shields.io/cran/v/casabourse )
 ![CRAN/METACRAN](https://img.shields.io/cran/l/casabourse)
+![alt text](https://github.com/AODiakite/casabourse/blob/main/casabourse.png)
 
 
 ## Casabourse
