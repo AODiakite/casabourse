@@ -1,21 +1,6 @@
----
-title: "Library Casabourse"
-author: "ABDOUL OUDOUSS DIAKITE"
-date: "16 décembre,2021"
-output:
-  html_document: 
-    toc: yes
-    fig_caption: yes
-    keep_md: yes
-    fig_width: 10
-    fig_height: 10
-  word_document: 
-    toc: yes
-  pdf_document:
-    keep_tex: yes
-    toc: yes
-always_allow_html: true
----
+
+![CRAN/METACRAN](https://img.shields.io/cran/v/casabourse)
+![CRAN/METACRAN](https://img.shields.io/cran/l/casabourse)
 
 
 ## Casabourse
@@ -26,21 +11,13 @@ library(casabourse)
 Casabourse est un R package qui permet d’obtenir des données à temps réel de la bourse de Casablanca. L’objectif est de faciliter l’accès aux données à tous les utilisateurs du langage de programmation R. Ce package comporte une diversité de données accessibles juste par appel de fonction.
 
 ## Guide d'installation
-Ce package est disponible sur [github](https://github.com/AODiakite/casabourse) pour l’installer vous devez exécuter ces lignes de codes suivantes
+Ce package est disponible sur [github](https://github.com/AODiakite/casabourse) et sur le [CRAN](https://cran.r-project.org/web/checks/check_results_casabourse.html) pour l’installer vous devez exécuter ces lignes de codes suivantes
 
 ```r
-#Installez les packages devtools et reticulate si vous ne les avez pas déjà
-library(devtools)
-library(reticulate)
+#Version CRAN
+install.packages("casabourse")
+#Version de dev github
 devtools::install_github("AODiakite/casabourse")
-```
-
-Une fois que vous avez installé casabourse, vous devez appeler la fonction **install.tools** qui installera toutes les dépendences du package.
-
-```r
-library(casabourse)
-install.tools()
-# Si ">>>" apparait, inserer le mot exit, appuyer sur entrer puis laisser le telechargement sur poursuivre jusqu'à l'apparition de '>'
 ```
 
 
@@ -320,15 +297,6 @@ today.transactions()
 ## 10 15:36:39 CIMENTS DU MAROC       1 860,00 25,00    46 500,00 
 ## # … with 40 more rows
 ```
-
- 
-## Les fonctions annexes :
- 
-Ce package contient aussi des fonctions annexes très utiles. Parmi elles :
-
-> - **install.tools()** : pour une première utilisation du package, vous devez exécuter cette fonction qui permettra de télécharger automatiquement toutes les dépendances dont vous aurez besoin.
-> - **gsheet2tbl("url")** : reçoit un lien d’une feuille de calcul Google sheet comme argument et permet de lire automatiquement les données qui s’y trouve sous forme d’une table sans avoir à télécharger la feuille dans votre ordinateur.
-> - **gsheet2txtl("url")** : reçoit un lien d’une feuille de calcul Google sheet comme argument et permet de lire automatiquement les données qui s’y trouve sous forme de texte sans avoir à télécharger la feuille dans votre ordinateur.
 
 ## Exemples d'utilisations de la library(casabourse) :
 > - Nous allons tracer la courbe de variations des cours des titres de Attijariwafa Bank et de la Banque Populaire du Maroc entre le début de l’année 2020 et le 15 décembre 2021.
