@@ -2,11 +2,7 @@
 
 export(bySector)
 export(daily.data)
-export(gsheet2tbl)
-export(gsheet2text)
-export(install.tools)
 export(instruments)
-export(madex.data)
 export(masi.data)
 export(msi20.data)
 export(tickers)
