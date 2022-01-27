@@ -351,7 +351,7 @@ plt <- plot_ly(data = df, x=~as.Date(rownames(df)), y=~df$returnATW,
                name = "Attijariwafa Bank", type = 'scatter', mode = 'lines') 
 
 plt <- plt %>% add_trace(y=~df$returnBCP,name = "Banque Populaire du Maroc" )
-plt <- plt %>% layout(title= 'Variation des rentabilité',
+plt <- plt %>% layout(title= 'Variation des rentabilités',
                       xaxis = list(title = 'Dates'), 
                       yaxis = list(title = 'Returns'))
 plt
