@@ -1,6 +1,6 @@
 ![CRAN/METACRAN](https://img.shields.io/cran/v/casabourse )
 ![CRAN/METACRAN](https://img.shields.io/cran/l/casabourse)
-![GitHub tag checks state](https://img.shields.io/github/checks-status/AODiakite/casabourse/v0.2.0)
+[![](https://cranlogs.r-pkg.org/badges/casabourse)](https://cran.r-project.org/package=casabourse)
 ![alt text](https://github.com/AODiakite/casabourse/blob/main/casabourse.png)
 
 
