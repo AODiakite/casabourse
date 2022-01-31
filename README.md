@@ -1,6 +1,7 @@
 ![CRAN/METACRAN](https://img.shields.io/cran/v/casabourse )
 ![CRAN/METACRAN](https://img.shields.io/cran/l/casabourse)
 [![](https://cranlogs.r-pkg.org/badges/casabourse)](https://cran.r-project.org/package=casabourse)
+[![](https://cranlogs.r-pkg.org/badges/grand-total/casabourse)](https://cran.r-project.org/package=casabourse)
 ![alt text](https://github.com/AODiakite/casabourse/blob/main/casabourse.png)
 
 
