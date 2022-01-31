@@ -2,7 +2,8 @@
 ![CRAN/METACRAN](https://img.shields.io/cran/l/casabourse)
 [![](https://cranlogs.r-pkg.org/badges/casabourse)](https://cran.r-project.org/package=casabourse)
 [![](https://cranlogs.r-pkg.org/badges/grand-total/casabourse?color=brightgreen)](https://cran.r-project.org/package=casabourse)
-<img src="https://github.com/AODiakite/casabourse/blob/main/casabourse.png" alt="drawing" width="150" style="float:left;margin:0 10px 0 20px;" />
+
+<img align=left src="https://github.com/AODiakite/casabourse/blob/main/casabourse.png" alt="drawing" width="200" />
 
 
 ## Casabourse
