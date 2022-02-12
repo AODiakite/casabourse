@@ -1,5 +1,5 @@
-![CRAN/METACRAN](https://img.shields.io/cran/v/casabourse)
-![CRAN/METACRAN](https://img.shields.io/cran/l/casabourse)
+![CRAN/METACRAN](https://www.r-pkg.org/badges/version/casabourse)
+![CRAN/METACRAN](https://badgen.net/cran/license/casabourse)
 [![](https://cranlogs.r-pkg.org/badges/casabourse)](https://cran.r-project.org/package=casabourse)
 [![](https://cranlogs.r-pkg.org/badges/grand-total/casabourse?color=brightgreen)](https://cran.r-project.org/package=casabourse)
 
