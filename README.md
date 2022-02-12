@@ -14,7 +14,7 @@ library(casabourse)
 Casabourse est un R package qui permet d’obtenir des données à temps réel de la bourse de Casablanca. L’objectif est de faciliter l’accès aux données à tous les utilisateurs du langage de programmation R. Ce package comporte une diversité de données accessibles juste par appel de fonction.
 
 ## Guide d'installation
-Ce package est disponible sur [github](https://github.com/AODiakite/casabourse) et sur le [CRAN](https://cran.r-project.org/web/checks/check_results_casabourse.html) pour l’installer vous devez exécuter ces lignes de codes suivantes
+Ce package est disponible sur [github](https://github.com/AODiakite/casabourse) et sur le [CRAN](https://cran.r-project.org/web/packages/casabourse/index.html) pour l’installer vous devez exécuter ces lignes de codes suivantes
 
 ```r
 #Version CRAN
