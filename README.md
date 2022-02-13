@@ -1,7 +1,9 @@
-![CRAN/METACRAN](https://img.shields.io/cran/v/casabourse )
-![CRAN/METACRAN](https://img.shields.io/cran/l/casabourse)
-![GitHub tag checks state](https://img.shields.io/github/checks-status/AODiakite/casabourse/v0.2.0)
-![alt text](https://github.com/AODiakite/casabourse/blob/main/casabourse.png)
+![CRAN/METACRAN](https://www.r-pkg.org/badges/version/casabourse)
+![CRAN/METACRAN](https://badgen.net/cran/license/casabourse)
+[![](https://cranlogs.r-pkg.org/badges/casabourse)](https://cran.r-project.org/package=casabourse)
+[![](https://cranlogs.r-pkg.org/badges/grand-total/casabourse?color=brightgreen)](https://cran.r-project.org/package=casabourse)
+
+<img align=left src="https://github.com/AODiakite/casabourse/blob/main/casabourse-logo.png" alt="drawing" width="200" />
 
 
 ## Casabourse
@@ -12,7 +14,7 @@ library(casabourse)
 Casabourse est un R package qui permet d’obtenir des données à temps réel de la bourse de Casablanca. L’objectif est de faciliter l’accès aux données à tous les utilisateurs du langage de programmation R. Ce package comporte une diversité de données accessibles juste par appel de fonction.
 
 ## Guide d'installation
-Ce package est disponible sur [github](https://github.com/AODiakite/casabourse) et sur le [CRAN](https://cran.r-project.org/web/checks/check_results_casabourse.html) pour l’installer vous devez exécuter ces lignes de codes suivantes
+Ce package est disponible sur [github](https://github.com/AODiakite/casabourse) et sur le [CRAN](https://cran.r-project.org/web/packages/casabourse/index.html) pour l’installer vous devez exécuter ces lignes de codes suivantes
 
 ```r
 #Version CRAN
@@ -351,7 +353,7 @@ plt <- plot_ly(data = df, x=~as.Date(rownames(df)), y=~df$returnATW,
                name = "Attijariwafa Bank", type = 'scatter', mode = 'lines') 
 
 plt <- plt %>% add_trace(y=~df$returnBCP,name = "Banque Populaire du Maroc" )
-plt <- plt %>% layout(title= 'Variation des renatbilités',
+plt <- plt %>% layout(title= 'Variation des rentabilités',
                       xaxis = list(title = 'Dates'), 
                       yaxis = list(title = 'Returns'))
 plt
