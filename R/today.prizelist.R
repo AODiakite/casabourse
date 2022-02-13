@@ -8,6 +8,7 @@
 #' @examples today.prizelist('up')
 #' @export
 today.prizelist <- function(up_or_down) {
+  up_or_down <- tolower(up_or_down)
   if (up_or_down == "up") {
     link <- "https://www.bmcecapitalbourse.com/bkbbourse/lists/TK?q=AE31180F8E3BE20E762758E81EDC1204&t=list&f=1W_PERF_PR&s=false#casapalmares"
     page <- rvest::read_html(link)

@@ -4,7 +4,7 @@
 \alias{daily.data}
 \title{Daily data}
 \usage{
-daily.data(ticker, from, to)
+daily.data(ticker = "MASI", from = "28-12-2020", to = "28-02-2022")
 }
 \arguments{
 \item{ticker}{ticker that matches the title that interests us (to remind you know all the tickers of the securities through the tickers() function)}

@@ -2,6 +2,7 @@
 
 export(bySector)
 export(daily.data)
+export(get_info)
 export(instruments)
 export(masi.data)
 export(msi20.data)
