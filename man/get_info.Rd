@@ -15,3 +15,6 @@ data frame
 \description{
 This function allows you to get quick information about a company
 }
+\examples{
+get_info("adh")
+}

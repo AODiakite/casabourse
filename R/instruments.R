@@ -7,10 +7,21 @@
 #' @examples instruments()
 #' @export
 instruments=function(){
-  instru=gsheet::gsheet2tbl('https://docs.google.com/spreadsheets/d/13COW6CoojBm-6f4SmhHpnYgBsSd2m528J0qiwyDYoaM/edit?usp=sharing')
-  instru=instru[,-seq(1,9,2)]
-  instru=stats::na.omit(instru)
-  colnames(instru)=instru[1,]
-  instru=instru[-1,]
-  return(instru)
+  link <- "https://docs.google.com/spreadsheets/d/13COW6CoojBm-6f4SmhHpnYgBsSd2m528J0qiwyDYoaM/edit?usp=sharing"
+  tryCatch(
+    {
+      instru <- gsheet::gsheet2tbl(link)
+      instru <- instru[, -seq(1, 9, 2)]
+      instru <- stats::na.omit(instru)
+      colnames(instru) <- instru[1, ]
+      instru <- instru[-1, ]
+      instru
+    },
+    error = function(e) {
+      print("Make sure you have an active internet connection")
+    },
+    warning = function(w) {
+      print("Make sure you have an active internet connection")
+    }
+  )
 }

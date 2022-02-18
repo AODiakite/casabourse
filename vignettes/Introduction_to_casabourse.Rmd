@@ -62,6 +62,11 @@ daily.data("ATW","01-01-2017","14-12-2021") #>affection de la table a la variabl
 ```
 
  
+## La fonction **get_info(ticker)**
+Elle permet d'obtenir des informations rapides sur une entreprise.
+```{r message=FALSE, warning=FALSE}
+get_info('ATW')
+```
 ## La fonction **bySector()** :
  
 Elle renvoie une table contenant des données par secteur d’activités. Elle est une fonction sans argument.

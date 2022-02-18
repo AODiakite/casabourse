@@ -1,7 +1,7 @@
 Package: casabourse
 Type: Package
 Title: Casablanca Stock Exchange Data
-Version: 1.0.0
+Version: 1.2.0
 Authors@R: 
     person(given = "Abdoul Oudouss",
            family = "Diakité",
@@ -17,7 +17,7 @@ RoxygenNote: 7.1.2
 Imports: 
     gsheet,
     rvest,
-    httr
+    RJSONIO
 Suggests: 
     rmarkdown,
     knitr

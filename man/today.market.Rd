@@ -13,5 +13,5 @@ data.frame
 is without argument and returns the current price of financial instruments as well as their variations, their opening prices, their max etc.
 }
 \examples{
-today.market()
+\dontrun{today.market()}
 }

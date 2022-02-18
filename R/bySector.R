@@ -7,5 +7,17 @@
 #' @examples bySector()
 #' @export
 bySector=function(){
-  return(gsheet::gsheet2tbl("https://docs.google.com/spreadsheets/d/1gYSo8SnPLs2xN96j1KPa5_ESIay_Tew779kJ7vBHiYY/edit?usp=sharing"))
+  tryCatch(
+    {
+      bySect =gsheet::gsheet2tbl("https://docs.google.com/spreadsheets/d/1gYSo8SnPLs2xN96j1KPa5_ESIay_Tew779kJ7vBHiYY/edit?usp=sharing")
+      bySect
+    },
+    error = function(e) {
+      print("Make sure you have an active internet connection")
+    },
+    warning = function(w) {
+      print("Make sure you have an active internet connection")
+    }
+  )
+
 }
