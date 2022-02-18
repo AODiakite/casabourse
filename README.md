@@ -43,6 +43,33 @@ head(tickers)
 ## 5  GAZ MA0000010951
 ## 6  AGM MA0000010944
 ```
+## La fonction **get_info(ticker)**
+
+Depuis la version 1.0.0 de 'casabourse', il est possible d'obtenir des informations rapides sur une entreprise.
+
+```r
+#Information sur Addoha P
+get_info('adh')
+```
+
+```
+##                            Information
+## name                          Addoha P
+## name_2                          ADDOHA
+## ISIN                      MA0000011512
+## nbTitre                      402551254
+## cours                           11.900
+## cloture                          11.55
+## capitalisation           4790359922.60
+## cotation         18/02/2022 \xe0 15:39
+## variation                         3.03
+## volume_variation                  0.35
+## volume                        30613642
+## volumeTitre                    2572575
+## ouverture                       11.900
+## min                             11.700
+## max                             12.240
+```
 
 ## La fonction **msi20.data()**
  
