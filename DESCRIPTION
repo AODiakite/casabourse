@@ -1,7 +1,7 @@
 Package: casabourse
 Type: Package
 Title: Casablanca Stock Exchange Data
-Version: 1.2.0
+Version: 1.3.0
 Authors@R: 
     person(given = "Abdoul Oudouss",
            family = "Diakité",
