@@ -16,5 +16,5 @@ data.frame
 It receives '' up '' or '' down '' respectively and returns a table prizelist of rising or falling prices of market instruments
 }
 \examples{
-today.prizelist('up')
+\dontrun{today.prizelist('up')}
 }

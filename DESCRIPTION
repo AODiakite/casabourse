@@ -17,8 +17,8 @@ RoxygenNote: 7.1.2
 Imports: 
     gsheet,
     rvest,
-    RJSONIO
+    httr
 Suggests: 
     rmarkdown,
-    knitr
+    knitr,
 VignetteBuilder: knitr

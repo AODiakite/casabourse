@@ -30,6 +30,7 @@ daily.data <- function(ticker = "MASI", from = "28-12-2020", to = "28-02-2022") 
           periode <- data.frame(Date)
           masi <- merge(masi, periode, by = "Date")
           masi <- masi[order(masi$Date, decreasing = TRUE), ]
+          options(warn = -1)
           masi
         },
         error = function(e) {
@@ -79,6 +80,7 @@ daily.data <- function(ticker = "MASI", from = "28-12-2020", to = "28-02-2022") 
           df <- data.frame(Date, Value, Minimum, Maximum, Variation, Volume)
           rownames(df) <- df$Date
           df <- df[, -1]
+          options(warn = -1)
           df
         },
         error = function(e) {

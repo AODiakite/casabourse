@@ -19,9 +19,11 @@ get_info <- function(ticker) {
       dat <- data.frame(tick, codeisin)
       isin <- dat[dat$tick == ticker, 2]
       link <- paste("https://www.leboursier.ma/api?method=getStockInfo&ISIN=", "&format=json", sep = isin)
-      df_info <- RJSONIO::fromJSON(link)
-      df_info <- data.frame(df_info$result)
+      df_info <- httr::GET(link)
+      df_info <- httr::content(df_info, encoding = "UTF-8")
+      df_info <- t(data.frame(df_info$result))
       colnames(df_info) <- "Information"
+      options(warn = -1)
       df_info
     },
     error = function(e) {

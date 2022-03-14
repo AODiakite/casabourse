@@ -5,7 +5,7 @@
 #'
 #' @return data.frame
 #' @description It receives '' up '' or '' down '' respectively and returns a table prizelist of rising or falling prices of market instruments
-#' @examples today.prizelist('up')
+#' @examples \dontrun{today.prizelist('up')}
 #' @export
 today.prizelist <- function(up_or_down) {
   up_or_down <- tolower(up_or_down)
