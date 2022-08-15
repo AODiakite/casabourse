@@ -4,7 +4,7 @@
 #'
 #' @return data.frame
 #' @description This is a function for downloading data from the MASI index. It returns a given table.
-#' @examples masi.data()
+#' @examples \dontrun{masi.data()}
 #' @export
 masi.data=function(){
   tryCatch(

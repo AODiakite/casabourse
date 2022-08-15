@@ -13,5 +13,5 @@ data.frame
 It allows you to obtain a table of transactions for the day. It is a function without arguments.
 }
 \examples{
-today.transactions()
+\dontrun{today.transactions()}
 }

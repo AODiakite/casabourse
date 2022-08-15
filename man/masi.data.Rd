@@ -13,5 +13,5 @@ data.frame
 This is a function for downloading data from the MASI index. It returns a given table.
 }
 \examples{
-masi.data()
+\dontrun{masi.data()}
 }

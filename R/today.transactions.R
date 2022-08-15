@@ -2,7 +2,7 @@
 #'
 #' @return data.frame
 #' @description It allows you to obtain a table of transactions for the day. It is a function without arguments.
-#' @examples today.transactions()
+#' @examples \dontrun{today.transactions()}
 #' @export
 today.transactions <- function() {
   tryCatch(

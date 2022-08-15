@@ -1,3 +1,5 @@
+# casabourse 2.0.0
+
 # casabourse 1.3.0
 
 # casabourse 1.2.0

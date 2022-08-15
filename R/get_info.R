@@ -7,7 +7,6 @@
 #' @description This function allows you to get quick information about a company
 #' @examples get_info("adh")
 #' @export
-#' @examples
 get_info <- function(ticker) {
   ticker <- toupper(ticker)
   tryCatch(
