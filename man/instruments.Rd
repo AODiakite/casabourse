@@ -13,5 +13,5 @@ data.frame
 It is without argument and gives us information on the financial instruments of the market, such as the ISIN code, the sub-fund, the number of securities etc.
 }
 \examples{
-instruments()
+ R.utils::withTimeout(instruments(),timeout = 4)
 }

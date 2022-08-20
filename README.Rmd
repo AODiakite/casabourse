@@ -1,0 +1,189 @@
+---
+title: "Library Casabourse"
+author: "ABDOUL OUDOUSS DIAKITE"
+date: "`r format(Sys.time(),'%d %B,%Y')`"
+output:
+  html_document: 
+    toc: yes
+    fig_caption: yes
+    keep_md: yes
+    fig_width: 10
+    fig_height: 10
+  word_document: 
+    toc: yes
+  pdf_document: 
+    toc: yes
+    latex_engine: lualatex
+always_allow_html: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Casabourse
+```{r}
+library(casabourse)
+```
+Casabourse est un R package qui permet d’obtenir des données à temps réel de la bourse de Casablanca. L’objectif est de faciliter l’accès aux données à tous les utilisateurs du langage de programmation R. Ce package comporte une diversité de données accessibles juste par appel de fonction.
+
+## Guide d'installation
+Ce package est disponible sur [github](https://github.com/AODiakite/casabourse) et sur le [CRAN](https://cran.r-project.org/web/packages/casabourse/index.html) pour l’installer vous devez exécuter une de ces lignes de codes :
+```{r, eval=FALSE}
+#CRAN version
+install.packages("casabourse")
+#Or github dev version
+devtools::install_github("AODiakite/casabourse")
+```
+
+## La fonction **tickers()**
+ 
+Cette fonction ne prend aucun argument et retourne une table de données associant chaque entreprise à un ticker. Il est important de visualiser les tickers. En effet, ils sont utilisés par les autres fonctions du package pour représenter les entreprises auxquelles ils correspondent.
+```{r cars}
+#' Affichage des tickers
+tickers <- tickers()
+head(tickers)
+```
+
+
+## La fonction **msi20.data()**
+ 
+C’est une fonction permettant de télécharger les données de l’indice MSI20. Elle renvoie une table de  données.
+```{r}
+msi20 <- msi20.data() #affection de la table MSI20 a la variable ms
+msi20 #afichage des premiers elements de la table
+```
+
+## La fonction **masi.data()**
+ 
+C’est une fonction permettant de télécharger les données de l’indice MASI. Elle renvoie une table de  données.
+```{r}
+#' Affichage des données de MASI
+ms <- masi.data() #affection de la table MASI a la variable ms
+head(ms) #afichage des premiers elements de la table
+```
+
+
+ 
+## La fonction **daily.data("ticker", "from", "to")** :
+ 
+Comme son nom l’indique, cette fonction renvoie les cours journaliers d’un titre entre deux dates données par l’utilisateur. Elle reçoit trois arguments :
+* ticker : qui correspond au ticker du titre qui nous intéresse ou même de l'indice MASI( pour rappelle vous pouvez connaitre tous les tickers des titres grâce à la fonction tickers() )
+* from : représente la date de début de collecte de données. Cet argument est du type ‘’jour-mois-année’’.
+* to : représente la date d’arrêt de collecte de données. Cet argument est du type ‘’jour-mois-année’’.
+NB : Les week-end ne sont pas pris en compte lors du téléchargement des données et en plus Il est important de mettre chaque argument entre des doubles quotes( ‘’ ‘’)
+
+```{r message=FALSE, warning=FALSE}
+#Affichage des cours journaliers de ATTIJARIWAFA BANK entre 01 janvier 2017 et le 14 decembre 2021
+atw <- daily.data("atw","01-01-2017","14-12-2021") #affection de la table a la variable atw
+head(atw) #afichage des premiers elements de la table
+
+```
+
+ 
+## La fonction **bySector()** :
+ 
+Elle renvoie une table contenant des données par secteur d’activités. Elle est une fonction sans argument.
+```{r}
+#Afichage des données par secteur d'activité
+bySector()
+```
+
+ 
+## La fonction **instruments()** :
+ 
+Elle est sans argument et nous donne les informations sur les instruments financiers du marché, telles que le code ISIN, le compartiment, le nombre de titres etc.
+
+```{r}
+#Afichage les instruments financiers du marché
+instruments()
+```
+
+ 
+## La classe de fonctions **today.** :
+ 
+C’est une classe de fonctions permettant d’obtenir des informations de la date d’aujourd’hui. Nous pouvons y trouver les fonctions suivantes :
+
+> - **today.prizelist("up_or_down")** : reçoit ‘’up’’ ou ‘’down’’ et renvoie respectivement une table de palmarès de hausse ou de baisse des cours des instruments du marché
+```{r}
+#Afichage du palmares de hausse des cours de la journée
+today.prizelist('up')
+```
+
+> - **today.market()** : est sans argument et renvoie le cours actuel des instruments financier ainsi que leurs variations, leurs cours à l’ouverture, leurs max etc.
+```{r}
+#Affichage des données du marché d'aujourd'hui
+today.market()
+```
+
+> - **today.transactions()** : permet d’obtenir une table des transactions de la journée. Elle est une fonction sans argument.
+```{r}
+#Affichages des transactions de la journée
+today.transactions()
+```
+
+## Exemples d'utilisations de la library(casabourse) :
+> - Nous allons tracer la courbe de variations des cours des titres de Attijariwafa Bank et de la Banque Populaire du Maroc entre le début de l’année 2020 et le 15 décembre 2021.
+```{r,include=FALSE}
+library(casabourse) 
+library(ggplot2)
+```
+
+```{r, echo=TRUE}
+#lecture des données de Attijariwafa Bank
+atw <- daily.data(ticker = "ATW", from = "01-01-2020", to = "15-12-2021")
+#lecture des données de la Banque Populaire du Maroc
+bcp <- daily.data(ticker = "BCP", from = "01-01-2020", to = "15-12-2021")
+data=merge(atw,bcp, by = "Date")
+
+plot_ATW =  ggplot(data = data, aes(x = Date,y = ATW))+
+  geom_line()+
+  labs(title = "Attijariwafa Bank")+
+  ggthemes::theme_calc()# Pour changer de theme
+
+plot_BCP=  ggplot(data = data, aes(x = Date,y = BCP))+
+  geom_line()+
+  labs(title = "Banque populaire")+
+  ggthemes::theme_calc()# Pour changer de theme
+
+library(patchwork)
+plot_ATW|plot_BCP
+
+```
+
+
+
+
+> - Traçons maintenant la courbe des taux de rentabilités des titres de Attijariwafa Bank et de la Banque Populaire du Maroc entre le 15 octobre 2021 et le 15 décembre 2021.
+
+```{r,echo=TRUE, message=FALSE, warning=FALSE, r,echo=TRUE,out.width="100%"}
+rent <- function(x){
+  returns = (x[-1]-x[-length(x)])/x[-length(x)]
+  c(0,round(returns*100,2))
+}
+#lecture des données de Attijariwafa Bank
+atw <- daily.data(ticker = "ATW", from = "15-10-2021", to = "15-12-2021")
+#lecture des données de la Banque Populaire du Maroc
+bcp <- daily.data(ticker = "BCP", from = "15-10-2021", to = "15-12-2021")
+#Utilisation de la function rent
+atw$returnATW = rent(atw$ATW)
+bcp$returnBCP = rent(bcp$BCP)
+
+
+#Traçage de la courbe avec le package ggplot2
+data = merge(atw,bcp,by = "Date")
+plot_ATW =  ggplot(data = data, aes(x = Date,y = returnATW))+
+  geom_line()+
+  labs(title = "Rentabilité Attijariwafa Bank en %")+
+  ggthemes::theme_calc()# Pour changer de theme
+
+plot_BCP=  ggplot(data = data, aes(x = Date,y = returnBCP))+
+  geom_line()+
+  labs(title = "Rentabilité Banque populaire en %")+
+  ggthemes::theme_calc()# Pour changer de theme
+
+library(patchwork)
+plot_ATW|plot_BCP
+```
+
+
+

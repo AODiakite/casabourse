@@ -1,0 +1,11 @@
+name: Publish Document
+title:
+username:
+account: rpubs
+server: rpubs.com
+hostUrl: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/933717/b3f0a21287264f19acfb1a9459ee6654
+bundleId: https://api.rpubs.com/api/v1/document/933717/b3f0a21287264f19acfb1a9459ee6654
+url: http://rpubs.com/AODiakite/933717/edit
+when: 1660953742.67652
+lastSyncTime: 1660953742.67654

@@ -16,5 +16,5 @@ data frame
 This function allows you to get quick information about a company
 }
 \examples{
-get_info("adh")
+{R.utils::withTimeout(get_info("adh"),timeout = 4)}
 }

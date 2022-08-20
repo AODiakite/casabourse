@@ -1,9 +1,21 @@
-![CRAN/METACRAN](https://www.r-pkg.org/badges/version/casabourse)
-![CRAN/METACRAN](https://badgen.net/cran/license/casabourse)
-[![](https://cranlogs.r-pkg.org/badges/casabourse)](https://cran.r-project.org/package=casabourse)
-[![](https://cranlogs.r-pkg.org/badges/grand-total/casabourse?color=brightgreen)](https://cran.r-project.org/package=casabourse)
-
-<img align=left src="https://github.com/AODiakite/casabourse/blob/main/casabourse-logo.png" alt="drawing" width="200" />
+---
+title: "Library Casabourse"
+author: "ABDOUL OUDOUSS DIAKITE"
+date: "20 August,2022"
+output:
+  html_document: 
+    toc: yes
+    fig_caption: yes
+    keep_md: yes
+    fig_width: 10
+    fig_height: 10
+  word_document: 
+    toc: yes
+  pdf_document: 
+    toc: yes
+    latex_engine: lualatex
+always_allow_html: true
+---
 
 
 ## Casabourse
@@ -22,7 +34,6 @@ install.packages("casabourse")
 #Or github dev version
 devtools::install_github("AODiakite/casabourse")
 ```
-
 
 ## La fonction **tickers()**
  
@@ -43,33 +54,7 @@ head(tickers)
 ## 5  GAZ MA0000010951
 ## 6  AGM MA0000010944
 ```
-## La fonction **get_info(ticker)**
 
-Depuis la version 1.0.0 de 'casabourse', il est possible d'obtenir des informations rapides sur une entreprise.
-
-```r
-#Information sur Addoha P
-get_info('adh')
-```
-
-```
-##                            Information
-## name                          Addoha P
-## name_2                          ADDOHA
-## ISIN                      MA0000011512
-## nbTitre                      402551254
-## cours                           11.900
-## cloture                          11.55
-## capitalisation           4790359922.60
-## cotation         18/02/2022 \xe0 15:39
-## variation                         3.03
-## volume_variation                  0.35
-## volume                        30613642
-## volumeTitre                    2572575
-## ouverture                       11.900
-## min                             11.700
-## max                             12.240
-```
 
 ## La fonction **msi20.data()**
  
@@ -84,26 +69,26 @@ msi20 #afichage des premiers elements de la table
 ## # A tibble: 20 × 6
 ##    Libellé              Place      Cours Quantité `Var.(%)` Date      
 ##    <chr>                <chr>      <dbl> <chr>    <chr>     <chr>     
-##  1 ATLANTASANAD         Casablanca  1396 -        -         11/02/2022
-##  2 ATTIJARIWAFA BANK    Casablanca   493 -        -         11/02/2022
-##  3 BANK OF AFRICA       Casablanca   220 -        -         11/02/2022
-##  4 BCP                  Casablanca 29455 -        -         11/02/2022
-##  5 CIMENTS DU MAROC     Casablanca  1996 -        -         11/02/2022
-##  6 COSUMAR              Casablanca 27145 -        -         11/02/2022
-##  7 DISWAY               Casablanca  7671 -        -         11/02/2022
-##  8 DOUJA PROM ADDOHA    Casablanca  1179 -        -         11/02/2022
-##  9 HPS                  Casablanca  6631 -        -         11/02/2022
-## 10 ITISSALAT AL-MAGHRIB Casablanca  1363 -        -         11/02/2022
-## 11 LABEL VIE            Casablanca  5301 -        -         11/02/2022
-## 12 LAFARGEHOLCIM MAROC  Casablanca  2271 -        -         11/02/2022
-## 13 MANAGEM              Casablanca  1820 -        -         11/02/2022
-## 14 MICRODATA            Casablanca   655 -        -         11/02/2022
-## 15 MUTANDIS SCA         Casablanca   263 -        -         11/02/2022
-## 16 SMI                  Casablanca  1499 -        -         11/02/2022
-## 17 SNEP                 Casablanca  8611 -        -         11/02/2022
-## 18 SODEP-Marsa Maroc    Casablanca  2897 -        -         11/02/2022
-## 19 SONASID              Casablanca   750 -        -         11/02/2022
-## 20 TAQA MOROCCO         Casablanca  1249 -        -         11/02/2022
+##  1 ATLANTASANAD         Casablanca  1315 -        -         19/08/2022
+##  2 ATTIJARIWAFA BANK    Casablanca   445 -        -         19/08/2022
+##  3 BANK OF AFRICA       Casablanca   180 -        -         19/08/2022
+##  4 BCP                  Casablanca  2599 -        -         19/08/2022
+##  5 CIMENTS DU MAROC     Casablanca  1600 -        -         19/08/2022
+##  6 COSUMAR              Casablanca   225 -        -         19/08/2022
+##  7 DISWAY               Casablanca   736 -        -         19/08/2022
+##  8 DOUJA PROM ADDOHA    Casablanca   821 -        -         19/08/2022
+##  9 HPS                  Casablanca  6020 -        -         19/08/2022
+## 10 ITISSALAT AL-MAGHRIB Casablanca 12135 -        -         19/08/2022
+## 11 LABEL VIE            Casablanca  4620 -        -         19/08/2022
+## 12 LAFARGEHOLCIM MAROC  Casablanca  1760 -        -         19/08/2022
+## 13 MANAGEM              Casablanca  2021 -        -         19/08/2022
+## 14 MICRODATA            Casablanca   542 -        -         19/08/2022
+## 15 MUTANDIS SCA         Casablanca   230 -        -         19/08/2022
+## 16 SMI                  Casablanca  1465 -        -         19/08/2022
+## 17 SNEP                 Casablanca   829 -        -         19/08/2022
+## 18 SODEP-Marsa Maroc    Casablanca   260 -        -         19/08/2022
+## 19 SONASID              Casablanca  7575 -        -         19/08/2022
+## 20 TAQA MOROCCO         Casablanca  1184 -        -         19/08/2022
 ```
 
 ## La fonction **masi.data()**
@@ -120,12 +105,12 @@ head(ms) #afichage des premiers elements de la table
 ## # A tibble: 6 × 8
 ##   `Code Isin`  Instrument           `Nombre de titres` Cours    `Facteur flott…`
 ##   <chr>        <chr>                <chr>              <chr>    <chr>           
-## 1 MA0000012445 ATTIJARIWAFA BANK    215 140 839,00     493,00   0,30            
-## 2 MA0000011488 ITISSALAT AL-MAGHRIB 879 095 340,00     136,70   0,20            
-## 3 MA0000012320 LAFARGEHOLCIM MAR    23 431 240,00      2 280,00 0,30            
-## 4 MA0000011884 BCP                  203 312 473,00     295,00   0,20            
-## 5 MA0000012437 BANK OF AFRICA       205 606 648,00     223,00   0,25            
-## 6 MA0000012247 COSUMAR              94 487 143,00      271,95   0,40            
+## 1 MA0000012445 ATTIJARIWAFA BANK    215 140 839,00     443,50   0,30            
+## 2 MA0000011488 ITISSALAT AL-MAGHRIB 879 095 340,00     122,00   0,20            
+## 3 MA0000012320 LAFARGEHOLCIM MAR    23 431 240,00      1 760,00 0,30            
+## 4 MA0000011884 BCP                  203 312 473,00     258,00   0,20            
+## 5 MA0000012437 BANK OF AFRICA       205 606 648,00     180,00   0,25            
+## 6 MA0000012247 COSUMAR              94 487 143,00      225,00   0,40            
 ## # … with 3 more variables: `Facteur de plafonnement` <chr>,
 ## #   `Capitalisation flottante` <chr>, Poids <chr>
 ```
@@ -148,13 +133,13 @@ head(atw) #afichage des premiers elements de la table
 ```
 
 ```
-##             Value Minimum Maximum Variation Volume
-## 09/02/2017 430.05  430.05  431.50      0.00  49717
-## 10/02/2017 430.00  430.00  432.95     -0.01  20909
-## 13/02/2017 440.00  430.00  440.00      2.33   3028
-## 14/02/2017 427.00  427.00  435.00     -2.95   2038
-## 15/02/2017 430.00  427.00  432.00      0.70  82428
-## 16/02/2017 430.00  427.00  433.80      0.00   4937
+##         Date   ATW
+## 1 2017-08-16 449.5
+## 2 2017-08-17 449.0
+## 3 2017-08-18 443.0
+## 4 2017-08-22 437.0
+## 5 2017-08-23 437.0
+## 6 2017-08-24 437.0
 ```
 
  
@@ -169,18 +154,18 @@ bySector()
 
 ```
 ## # A tibble: 23 × 4
-##    Secteur                                          Valeur `Var %` `Var % 31/12`
-##    <chr>                                            <chr>  <chr>   <chr>        
-##  1 LOISIRS ET HOTELS                                515,69 2,66 %  3,83 %       
-##  2 INGENIERIES & BIENS D’EQUIPEMENT INDUSTRIELS     182,61 0,93 %  51,34 %      
-##  3 BOISSONS                                         17 38… 0,67 %  8,50 %       
-##  4 SERVICES DE TRANSPORT                            4 456… 0,42 %  3,50 %       
-##  5 SOCIETE DE FINANCEMENT & AUTRES ACTIVITES FINAN… 9 517… 0,28 %  7,50 %       
-##  6 SOCIETES DE PLACEMENT IMMOBILIER                 1 091… 0,23 %  9,07 %       
-##  7 SERVICES AUX COLLECTIVITES                       1 166… -       18,62 %      
-##  8 ELECTRICITE                                      2 791… -       18,95 %      
-##  9 BATIMENT & MATERIAUX DE CONSTRUCTION             22 50… -0,09 % 4,52 %       
-## 10 MINES                                            28 14… -0,13 % 9,91 %       
+##    Secteur                                 Valeur    `Var %` `Var % 31/12`
+##    <chr>                                   <chr>     <chr>   <chr>        
+##  1 SYLVICULTURE & PAPIER                   41,81     1,97 %  40,25 %      
+##  2 ELECTRICITE                             2 645,81  1,20 %  12,76 %      
+##  3 PETROLE & GAZ                           20 241,82 1,14 %  -5,76 %      
+##  4 PARTICIPATION ET PROMOTION IMMOBILIERES 3 265,21  0,80 %  -4,99 %      
+##  5 DISTRIBUTEURS                           43 787,47 0,52 %  -8,45 %      
+##  6 ASSURANCES                              4 974,06  0,49 %  -9,92 %      
+##  7 BANQUES                                 12 982,59 0,35 %  -7,97 %      
+##  8 BOISSONS                                15 140,20 -       -5,54 %      
+##  9 AGROALIMENTAIRE / PRODUCTION            32 907,80 -       -11,14 %     
+## 10 SERVICES AUX COLLECTIVITES              1 067,29  -       8,52 %       
 ## # … with 13 more rows
 ```
 
@@ -228,16 +213,16 @@ today.prizelist('up')
 ## # A tibble: 38 × 7
 ##    Nom          Cours `1 sem. perf.%` `Max 1 sem.` `Min 1 sem.` `Quantité 1 se…`
 ##    <chr>        <chr> <chr>           <chr>        <chr>        <chr>           
-##  1 Alliances P  47,00 +19,90%         48,40        39,00        2 036 166,00    
-##  2 FENIE BROSS… 165,… +15,42%         170,00       137,85       62 888,00       
-##  3 Lydec P      280,… +11,96%         -            -            360,00          
-##  4 BALIMA P     124,… +8,06%          124,00       114,75       45,00           
-##  5 Oulmes P     1 24… +7,52%          1 244,00     1 157,00     38,00           
-##  6 Mutandis Br  263,… +5,45%          268,50       248,00       167 341,00      
-##  7 IBMaroc.com… 43,99 +4,74%          43,99        40,74        6 127,00        
-##  8 Immr Invest… 115,… +4,55%          118,00       106,50       247 645,00      
-##  9 SNEP P       861,… +4,25%          890,00       809,00       124 579,00      
-## 10 Cartier Saa… 31,50 +3,96%          31,50        30,10        8 540,00        
+##  1 Med Paper P  30,49 +17,27%         31,40        24,94        117 629,00      
+##  2 PROMOPHARM   1 07… +10,03%         1 075,00     977,00       17,00           
+##  3 Ennakl N     32,94 +7,65%          33,00        30,60        4 251,00        
+##  4 Colorado P   50,22 +6,04%          51,50        45,14        16 970,00       
+##  5 Alliances P  64,80 +5,87%          65,30        57,10        170 698,00      
+##  6 EQDOM P      1 17… +5,77%          1 174,00     1 110,00     22,00           
+##  7 S2M P        200,… +4,17%          200,00       190,00       1 595,00        
+##  8 Afric Indus. 379,… +4,12%          382,00       364,00       407,00          
+##  9 Sanlam Maro… 1 30… +4,00%          1 360,00     1 243,00     2 338,00        
+## 10 DISWAY P     736,… +3,66%          768,90       700,50       12 909,00       
 ## # … with 28 more rows, and 1 more variable: `Volume 1 sem.` <chr>
 ```
 
@@ -249,20 +234,20 @@ today.market()
 ```
 
 ```
-## # A tibble: 75 × 9
+## # A tibble: 76 × 9
 ##    Valeur    `Date/Heure` Ouverture Cours `Variation %` Quantité Volume `+ Haut`
 ##    <chr>     <chr>        <chr>     <chr> <chr>         <chr>    <chr>  <chr>   
-##  1 Addoha    11.02.2022   11,97     11,79 -1,75%        623 750  7 399… 12,10   
-##  2 AFMA      11.02.2022   1 390,00  1 39… -0,36%        7        9 730… 1 390,00
-##  3 Afric In… 11.02.2022   357,00    357,… -2,99%        85       30 38… 358,00  
-##  4 Afriquia… 11.02.2022   5 750,00  5 75… -2,54%        8        46 00… 5 750,00
-##  5 Agma      11.02.2022   4 801,00  4 80… 0,00%         14       67 21… 4 801,00
-##  6 Alliances 11.02.2022   47,00     47,00 +2,06%        177 070  8 408… 48,40   
-##  7 Aluminiu… 11.02.2022   1 445,00  1 44… -1,63%        27       39 00… 1 445,00
-##  8 Aradei C… 11.02.2022   450,10    451,… +0,22%        25 245   11 36… 458,95  
-##  9 ATLANTAS… 11.02.2022   141,10    139,… -0,99%        22 435   3 151… 142,00  
-## 10 Attijari… 11.02.2022   493,00    493,… 0,00%         16 404   8 091… 494,05  
-## # … with 65 more rows, and 1 more variable: `+ Bas` <chr>
+##  1 Addoha    19.08.2022   8,24      8,21  +0,12%        39 070   320 1… 8,29    
+##  2 AFMA      19.08.2022   1 500,00  1 50… +1,42%        1        1 500… 1 500,00
+##  3 Afric In… 19.08.2022   379,00    379,… 0,00%         5        1 895… 379,00  
+##  4 Afriquia… 19.08.2022   4 996,00  4 99… +1,96%        10       49 96… 4 996,00
+##  5 Agma      19.08.2022   5 600,00  5 60… 0,00%         30       168 0… 5 600,00
+##  6 Alliances 19.08.2022   64,50     64,80 +1,58%        51 803   3 342… 65,30   
+##  7 Aluminiu… 19.08.2022   1 557,00  1 59… +0,06%        30       47 88… 1 599,00
+##  8 Aradei C… 19.08.2022   445,90    445,… +0,20%        152      67 76… 445,90  
+##  9 ATLANTAS… 19.08.2022   127,80    131,… -0,38%        1 181    155 0… 131,95  
+## 10 Attijari… 19.08.2022   444,00    445,… +0,34%        11 034   4 889… 445,00  
+## # … with 66 more rows, and 1 more variable: `+ Bas` <chr>
 ```
 
 > - **today.transactions()** : permet d’obtenir une table des transactions de la journée. Elle est une fonction sans argument.
@@ -274,18 +259,18 @@ today.transactions()
 
 ```
 ## # A tibble: 50 × 5
-##    Heure    `Insturment financier`  Cours    Quantité Volume      
-##    <chr>    <chr>                   <chr>    <chr>    <chr>       
-##  1 15:40:13 SOTHEMA                 1 650,00 7,00     11 550,00   
-##  2 15:39:52 DELATTRE LEVIVIER MAROC 96,98    14,00    1 357,72    
-##  3 15:39:52 DELATTRE LEVIVIER MAROC 96,98    10,00    969,80      
-##  4 15:39:52 DELATTRE LEVIVIER MAROC 96,98    10,00    969,80      
-##  5 15:39:30 COSUMAR                 271,45   79,00    21 444,55   
-##  6 15:39:30 COSUMAR                 271,45   521,00   141 425,45  
-##  7 15:39:30 COSUMAR                 271,45   430,00   116 723,50  
-##  8 15:39:20 ATTIJARIWAFA BANK       493,00   2 850,00 1 405 050,00
-##  9 15:39:14 SALAFIN                 755,00   37,00    27 935,00   
-## 10 15:39:14 SALAFIN                 755,00   338,00   255 190,00  
+##    Heure    `Insturment financier`  Cours  Quantité Volume    
+##    <chr>    <chr>                   <chr>  <chr>    <chr>     
+##  1 15:39:41 SODEP-Marsa Maroc       260,00 84,00    21 840,00 
+##  2 15:39:41 DELATTRE LEVIVIER MAROC 55,00  13,00    715,00    
+##  3 15:39:32 MUTANDIS SCA            230,00 454,00   104 420,00
+##  4 15:39:10 MUTANDIS SCA            230,00 177,00   40 710,00 
+##  5 15:39:07 MUTANDIS SCA            230,00 1 054,00 242 420,00
+##  6 15:38:49 ALLIANCES               64,80  23,00    1 490,40  
+##  7 15:38:49 ALLIANCES               64,80  12,00    777,60    
+##  8 15:38:45 DELATTRE LEVIVIER MAROC 55,00  2,00     110,00    
+##  9 15:38:34 MUTANDIS SCA            230,00 2 000,00 460 000,00
+## 10 15:37:53 DELATTRE LEVIVIER MAROC 55,00  242,00   13 310,00 
 ## # … with 40 more rows
 ```
 
@@ -297,27 +282,26 @@ today.transactions()
 ```r
 #lecture des données de Attijariwafa Bank
 atw <- daily.data(ticker = "ATW", from = "01-01-2020", to = "15-12-2021")
-```
-
-
-```r
 #lecture des données de la Banque Populaire du Maroc
 bcp <- daily.data(ticker = "BCP", from = "01-01-2020", to = "15-12-2021")
+data=merge(atw,bcp, by = "Date")
+
+plot_ATW =  ggplot(data = data, aes(x = Date,y = ATW))+
+  geom_line()+
+  labs(title = "Attijariwafa Bank")+
+  ggthemes::theme_calc()# Pour changer de theme
+
+plot_BCP=  ggplot(data = data, aes(x = Date,y = BCP))+
+  geom_line()+
+  labs(title = "Banque populaire")+
+  ggthemes::theme_calc()# Pour changer de theme
+
+library(patchwork)
+plot_ATW|plot_BCP
 ```
 
-```r
-data=data.frame(atw,bcp)
+![](README_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
 
-plt <- plot_ly(data = data, x=~as.Date(rownames(data),'%d/%m/%Y'), y=~data$Value, 
-               name = "Attijariwafa Bank", type = 'scatter', mode = 'lines') 
-
-plt <- plt %>% add_trace(y=~data$Value.1,name = "Banque Populaire du Maroc" )
-plt <- plt %>% layout(title= 'Variation des cours',
-                      xaxis = list(title = 'Dates'), yaxis = list(title = 'Cours'))
-plt
-```
-
-![alt text](https://github.com/AODiakite/casabourse/blob/main/newplot%20(4).png)
 
 
 
@@ -325,42 +309,36 @@ plt
 
 
 ```r
-#function de return
-rent=function(x){
-  r=list(0)
-  for (i in 2:length(x)) {
-    
-    r[i]=(x[i]/x[i-1] -1)*100
-  }
-  return(t(data.frame(r)))
+rent <- function(x){
+  returns = (x[-1]-x[-length(x)])/x[-length(x)]
+  c(0,round(returns*100,2))
 }
 #lecture des données de Attijariwafa Bank
 atw <- daily.data(ticker = "ATW", from = "15-10-2021", to = "15-12-2021")
-```
-
-```r
 #lecture des données de la Banque Populaire du Maroc
 bcp <- daily.data(ticker = "BCP", from = "15-10-2021", to = "15-12-2021")
-```
-
-
-```r
 #Utilisation de la function rent
-returnATW=rent(as.numeric(atw$Value))
-returnBCP=rent(as.numeric(bcp$Value))
+atw$returnATW = rent(atw$ATW)
+bcp$returnBCP = rent(bcp$BCP)
 
-#Traçage de la courbe
-df=data.frame(returnATW,returnBCP)
-rownames(df)=rownames(atw)
-plt <- plot_ly(data = df, x=~as.Date(rownames(df),'%d/%m/%Y'), y=~df$returnATW, 
-               name = "Attijariwafa Bank", type = 'scatter', mode = 'lines') 
 
-plt <- plt %>% add_trace(y=~df$returnBCP,name = "Banque Populaire du Maroc" )
-plt <- plt %>% layout(title= 'Variation des rentabilités',
-                      xaxis = list(title = 'Dates'), 
-                      yaxis = list(title = 'Returns'))
-plt
+#Traçage de la courbe avec le package ggplot2
+data = merge(atw,bcp,by = "Date")
+plot_ATW =  ggplot(data = data, aes(x = Date,y = returnATW))+
+  geom_line()+
+  labs(title = "Rentabilité Attijariwafa Bank en %")+
+  ggthemes::theme_calc()# Pour changer de theme
+
+plot_BCP=  ggplot(data = data, aes(x = Date,y = returnBCP))+
+  geom_line()+
+  labs(title = "Rentabilité Banque populaire en %")+
+  ggthemes::theme_calc()# Pour changer de theme
+
+library(patchwork)
+plot_ATW|plot_BCP
 ```
-![alt text](https://github.com/AODiakite/casabourse/blob/main/newplot%20(5).png)
+
+<img src="README_files/figure-html/r-1.png" width="100%" />
+
 
 

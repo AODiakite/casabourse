@@ -17,8 +17,8 @@ RoxygenNote: 7.2.1
 Imports: 
     gsheet,
     rvest,
-    httr,
-    RJSONIO
+    RJSONIO,
+    R.utils
 Suggests: 
     rmarkdown,
     knitr

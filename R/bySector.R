@@ -4,7 +4,7 @@
 #'
 #' @return data.frame
 #' @description It returns a table containing data by industry. It is a function without arguments.
-#' @examples bySector()
+#' @examples {R.utils::withTimeout(bySector(),timeout = 4)}
 #' @export
 bySector=function(){
   tryCatch(

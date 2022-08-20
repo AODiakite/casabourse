@@ -13,5 +13,5 @@ data.frame
 It returns a table containing data by industry. It is a function without arguments.
 }
 \examples{
-bySector()
+{R.utils::withTimeout(bySector(),timeout = 4)}
 }
