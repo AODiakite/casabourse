@@ -1,22 +1,14 @@
 ---
 title: "Library Casabourse"
 author: "ABDOUL OUDOUSS DIAKITE"
-date: "20 August,2022"
-output:
-  html_document: 
-    toc: yes
-    fig_caption: yes
-    keep_md: yes
-    fig_width: 10
-    fig_height: 10
-  word_document: 
-    toc: yes
-  pdf_document: 
-    toc: yes
-    latex_engine: lualatex
-always_allow_html: true
 ---
 
+![CRAN/METACRAN](https://www.r-pkg.org/badges/version/casabourse)
+![CRAN/METACRAN](https://badgen.net/cran/license/casabourse)
+[![](https://cranlogs.r-pkg.org/badges/casabourse)](https://cran.r-project.org/package=casabourse)
+[![](https://cranlogs.r-pkg.org/badges/grand-total/casabourse?color=brightgreen)](https://cran.r-project.org/package=casabourse)
+
+<img align=left src="https://github.com/AODiakite/casabourse/blob/main/casabourse-logo.png" alt="drawing" width="200" />
 
 ## Casabourse
 
