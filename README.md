@@ -7,6 +7,7 @@ author: "ABDOUL OUDOUSS DIAKITE"
 ![CRAN/METACRAN](https://badgen.net/cran/license/casabourse)
 [![](https://cranlogs.r-pkg.org/badges/casabourse)](https://cran.r-project.org/package=casabourse)
 [![](https://cranlogs.r-pkg.org/badges/grand-total/casabourse?color=brightgreen)](https://cran.r-project.org/package=casabourse)
+![rcmd check](https://github.com/AODiakite/casabourse/actions/workflows/r.yml/badge.svg)
 
 <img align=left src="https://github.com/AODiakite/casabourse/blob/main/casabourse-logo.png" alt="drawing" width="200" />
 
